@@ -1,3 +1,37 @@
+ .km-gallery-e:after,
+      .km-gallery-e:before
+      {
+          content: "\e07d";
+      }
+      
+      .km-arrow-e:after,
+      .km-arrow-e:before
+      {
+          content: "\e045";
+      }
+      
+      .km-mood-e:after,
+      .km-mood-e:before
+      {
+          content: "\e08d";
+      }
+      
+      .km-report-e:after,
+      .km-report-e:before
+      {
+          content: "\e050";
+      }
+       
+      .buttonAppearance .km-button:not(.km-back)
+        {
+            font-size: 18px;
+       		height: auto;
+	        width: auto;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+        }
+
 ul,ol {list-style-type:none}
 
 .all-events .events-list {
