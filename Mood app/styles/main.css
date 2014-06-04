@@ -1,1 +1,88 @@
 ul,ol {list-style-type:none}
+
+.all-events .events-list {
+  margin: 0;
+  padding: 0;
+}
+
+.all-events .events-content {
+  padding: 1rem;
+}
+
+.all-events .events-content {
+  border-width: 0 0 1px;
+  border-style: solid;
+}
+
+.km-on-ios .all-events .events-content {
+  border-color: rgba(180, 180, 180, .5);
+}
+
+.km-on-android .all-events .events-content {
+  border-color: #444;
+}
+
+.km-on-wp .all-events .events-content {
+  border-color: #ccc;
+}
+
+.all-events .events-list h3 {
+  margin: 0 0 .5rem;
+}
+
+.km-on-ios .all-events .event-time,
+.km-on-wp .all-events .event-time {
+  color: #666;
+}
+
+.km-on-android .all-events .event-time {
+  color: #999;
+}
+
+.add-new-event .km-scroll-container,
+.add-new-event .new-event {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -moz-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+  -moz-box-orient: vertical;
+  -webkit-box-orient: vertical;
+  -webkit-align-items: stretch;
+  align-items: stretch;
+  -webkit-align-content: stretch;
+  align-content: stretch;
+}
+
+.km-on-ios .add-new-event .new-event-text,
+.km-on-android .add-new-event .new-event-text,
+.km-on-wp .add-new-event .new-event-text {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-top: 0;
+  padding: .5rem;
+  width: 100%;
+}
+
+.km-on-android .add-new-event .new-event-text,
+.km-on-ios .add-new-event .new-event-text {
+  padding: 1rem;
+  border: 0 none;
+}
+
+.km-on-android .add-new-event .new-event-text {
+  background-image: none;
+}
+
+.add-new-event .new-event-text {
+  height: 100%;
+}

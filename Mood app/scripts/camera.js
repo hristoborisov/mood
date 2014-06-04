@@ -59,7 +59,7 @@
                 function(message){
         				
     			}, 
-                { quality: 50,
+                { quality: 15,
                 destinationType: Camera.DestinationType.DATA_URL
              }); 
         },
@@ -91,8 +91,8 @@
                         newMood.Mood = mood;
                         newMood.Picture = data.result.Id;
             			
-                        //that.moodsDataSource.one('sync', function () {  
-                        //});
+                        that.moodsDataSource.one('sync', function () {  
+                        });
             
                         that.moodsDataSource.sync();
                         app.application.navigate('#home-view');

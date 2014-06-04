@@ -21,33 +21,55 @@
         data-role="view"
         data-title="Home">
         <div>
-            <ul style="text-align: center">
-    
-                <li><a style="width: 120px" id="gallery" data-role="button" data-icon="details" >Gallery</a></li>
-                <li><a style="width: 120px" id="camera" data-role="button" data-icon="camera" href="#camera-view">Take a photo</a></li>
-    </ul>            
-    
+            <ul>
+                <li><a style="width: 120px" id="galleryButton" data-role="button" data-icon="details" href="#gallery-view">Gallery</a></li>
+                <li><a style="width: 120px" id="cameraButton" data-role="button" data-icon="camera" href="#camera-view">Take a photo</a></li>
+    		</ul>
         </div>
     </div>
     
-<div id="camera-view"
+	<div id="camera-view"
         data-role="view"
         data-title="Camera"
      	data-model="app.cameraService.viewModel"
      	data-show="app.cameraService.show">
-        <div>
             <div data-role="navbar">
                 <a data-role="button" data-align="left" href="#home-view">Cancel</a>
-                
                 <a data-role="button" data-align="right" data-bind="click: onUpload">Upload</a>
             </div>
-            <img id="previewImage" style="width: 300px; margin: 10px;"/>
-            <ul id="moodButton" data-role="buttongroup">
-                <li>Happy</li>
-                <li>Sad</li>
-            </ul>
-            
-            <input id="photoComment"/>
+            <div>
+                <img id="previewImage" style="width: 300px; margin: 10px;"/>
+                <ul id="moodButton" data-role="buttongroup">
+                    <li>Happy</li>
+                    <li>Sad</li>
+                </ul>
+                <input id="photoComment" />
+            </div>
     </div>
+
+    
+<div id="gallery-view" 
+         data-role="view" 
+         data-title="Gallery" 
+         data-model="app.cameraService.viewModel" 
+         class="all-events">
+        <header data-role="header">
+            <div data-role="navbar">
+                <span data-role="view-title"></span>
+                <a data-align="left" data-role="backbutton">Back</a>
+            </div>
+        </header>
+        <ul data-role="listView" data-style="inset" data-bind="source: moodsDataSource" data-template="listViewTemplate" class="events-list">
+        </ul>
+    </div>
+    
+    <script id="listViewTemplate" type="text/x-kendo-template">
+        <li class="events-content">
+            <h3 class="event-name">${Comment}</h3>
+            <img style="width: 50px" src="https://api.everlive.com/v1/xYopwdrrAJVDuvtf/Files/${Picture}/Download"></p>
+            <p>${Mood}</p>
+            <time class="event-time"><small>${CreatedDate()}</small></time>
+        </li>
+    </script>
 </body>
 </html>
