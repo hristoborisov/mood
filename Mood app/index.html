@@ -19,13 +19,16 @@
     <!--Home View-->
     <div id="home-view"
         data-role="view"
-        data-title="Home">
+        data-title="Home" class="buttonAppearance">
         <div>
-            <ul>
-                <li><a style="width: 120px" id="galleryButton" data-role="button" data-icon="details" href="#gallery-view">Gallery</a></li>
-                <li><a style="width: 120px" id="cameraButton" data-role="button" data-icon="camera" href="#camera-view">Take a photo</a></li>
-    		</ul>
-        </div>
+            <div>
+                <a  id="cameraButton" data-role="button" data-icon="camera" href="#camera-view" style="display:block;margin: 2em; text-align: center;width: auto;">Take a Photo</a></li>
+    		</div>
+
+            <div>
+	            <a  id="galleryButton" data-role="button" data-icon="gallery-e" href="#gallery-view" style="display:block;margin: 2em; text-align: center;width: auto;">Pick from Gallery</a>
+            </div>
+    </div>
     </div>
     
 	<div id="camera-view"
@@ -71,5 +74,40 @@
             <time class="event-time"><small>${CreatedDate()}</small></time>
         </li>
     </script>
+    <style>
+     .km-gallery-e:after,
+      .km-gallery-e:before
+      {
+          content: "\e07d";
+      }
+      
+      .km-arrow-e:after,
+      .km-arrow-e:before
+      {
+          content: "\e045";
+      }
+      
+      .km-mood-e:after,
+      .km-mood-e:before
+      {
+          content: "\e08d";
+      }
+      
+      .km-report-e:after,
+      .km-report-e:before
+      {
+          content: "\e050";
+      }
+       
+      .buttonAppearance .km-button:not(.km-back)
+        {
+            font-size: 18px;
+       		height: auto;
+	        width: auto;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+        }
+    </style>
 </body>
 </html>
