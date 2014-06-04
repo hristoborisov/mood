@@ -46,8 +46,8 @@
                     <li>Happy</li>
                     <li>Sad</li>
                 </ul>
-                  <div class="new-event">
-            			<textarea id="photoComment" placeholder="What is your mood today?" class="new-event-text"></textarea>
+                <div class="new-event" style="text-align: center;">
+            			<textarea id="photoComment" placeholder="What is your mood today?" class="k-textbox"></textarea>
         		  </div>
             </div>
     </div>
@@ -69,47 +69,13 @@
     </div>
     
     <script id="listViewTemplate" type="text/x-kendo-template">
-        <li class="events-content">
-            <h3 class="event-name">${Comment}</h3>
-            <img style="width: 50px" src="https://api.everlive.com/v1/xYopwdrrAJVDuvtf/Files/${Picture}/Download"></p>
-            <p>${Mood}</p>
+        <div class="product">
+            <p><img style="width: 50px;" src="https://api.everlive.com/v1/xYopwdrrAJVDuvtf/Files/${Picture}/Download" class="pullImage"></p>
+            <h3>${Mood}</h3>
+            <p style="" class="event-name">${Comment}</p>            
             <time class="event-time"><small>${CreatedDate()}</small></time>
-        </li>
+        </div>
     </script>
-    <style>
-     .km-gallery-e:after,
-      .km-gallery-e:before
-      {
-          content: "\e07d";
-      }
-      
-      .km-arrow-e:after,
-      .km-arrow-e:before
-      {
-          content: "\e045";
-      }
-      
-      .km-mood-e:after,
-      .km-mood-e:before
-      {
-          content: "\e08d";
-      }
-      
-      .km-report-e:after,
-      .km-report-e:before
-      {
-          content: "\e050";
-      }
-       
-      .buttonAppearance .km-button:not(.km-back)
-        {
-            font-size: 18px;
-       		height: auto;
-	        width: auto;
-            box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            -webkit-box-sizing: border-box;
-        }
-    </style>
+
 </body>
 </html>

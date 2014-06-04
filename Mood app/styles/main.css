@@ -1,3 +1,59 @@
+.km-ios7.km-pane>.km-loader, .km-ios7 .km-pane>.km-loader { background-color: black !important; color: white !important;}
+
+.km-gallery-e:after,
+.km-gallery-e:before
+{
+    content: "\e07d";
+}
+
+.km-arrow-e:after,
+.km-arrow-e:before
+{
+    content: "\e045";
+}
+
+.km-mood-e:after,
+.km-mood-e:before
+{
+    content: "\e08d";
+}
+
+.km-report-e:after,
+.km-report-e:before
+{
+    content: "\e050";
+}
+
+.buttonAppearance .km-button:not(.km-back)
+{
+    font-size: 18px;
+    height: auto;
+    width: auto;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.pullImage {
+        width: 64px;
+        height: 64px;
+        border-radius: 3px;
+        float: left;
+        margin-right: 1.3em;
+ }
+ .product h3 {
+        font-size: 1.3em;
+        line-height: 1.4em;
+        margin: 0;
+        padding: 0;
+        height: 1.3em;
+        overflow: hidden;
+ }
+ .product p {
+        font-size: 1em;
+        margin: 0;
+        padding: .3em 0 0;
+ }
+
 ul,ol {list-style-type:none}
 
 .all-events .events-list {
@@ -85,4 +141,20 @@ ul,ol {list-style-type:none}
 
 .add-new-event .new-event-text {
   height: 100%;
+}
+
+
+.k-input, input.k-textbox, textarea.k-textbox, input.k-textbox:hover, textarea.k-textbox:hover, .k-textbox>input, .k-multiselect-wrap {
+background-color: #fff;
+color: #515967;
+}
+input.k-textbox, textarea.k-textbox, input.k-textbox:hover, textarea.k-textbox:hover, .k-textbox>input {
+background: 0;
+}
+input.k-textbox {
+height: 2.13em;
+text-indent: .33em;
+}
+.k-block, .k-button, .k-textbox, .k-drag-clue, .k-touch-scrollbar, .k-window, .k-window-titleless .k-window-content, .k-window-action, .k-inline-block, .k-grid .k-filter-options, .k-grouping-header .k-group-indicator, .k-autocomplete, .k-multiselect, .k-combobox, .k-dropdown, .k-dropdown-wrap, .k-datepicker, .k-timepicker, .k-colorpicker, .k-datetimepicker, .k-notification, .k-numerictextbox, .k-picker-wrap, .k-numeric-wrap, .k-colorpicker, .k-list-container, .k-calendar-container, .k-calendar td, .k-calendar .k-link, .k-treeview .k-in, .k-editor-inline, .k-tooltip, .k-tile, .k-slider-track, .k-slider-selection, .k-upload {
+border-radius: 4px;
 }
