@@ -93,9 +93,9 @@
             			
                         that.moodsDataSource.one('sync', function () {  
                         });
-            
+                        
+            			app.application.navigate('#home-view');
                         that.moodsDataSource.sync();
-                        app.application.navigate('#home-view');
                     },
                     function (error) {
                         alert(JSON.stringify(error));
