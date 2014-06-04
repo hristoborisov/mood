@@ -45,6 +45,9 @@
             that.set("moodsDataSource", dataSource);
         },
         
+        onC: function(){
+            
+        },
         startCamera: function (){
             var that = this;
             
@@ -59,11 +62,13 @@
                 function(message){
         				
     			}, 
-                { quality: 15,
+                { quality: 10,
                 destinationType: Camera.DestinationType.DATA_URL
              }); 
         },
         onUpload: function(){
+            app.application.changeLoadingMessage("<h2>Uploading...</h2>");
+            app.application.showLoading();
             var that = this;
  			var mood = null;
             
@@ -86,15 +91,17 @@
             
             el.Files.create(file,
                     function (data) {
+                        
 						var newMood = that.moodsDataSource.add();
                         newMood.Comment = $('#photoComment').val();
                         newMood.Mood = mood;
                         newMood.Picture = data.result.Id;
             			
                         that.moodsDataSource.one('sync', function () {  
-                        });
-                        
-            			app.application.navigate('#gallery-view');
+                            app.application.hideLoading();
+                            app.application.navigate('#gallery-view');                         
+                        });                        
+            			
                         that.moodsDataSource.sync();
                     },
                     function (error) {
@@ -109,6 +116,7 @@
         show: function()
         {
             app.cameraService.viewModel.startCamera.apply(app.cameraService.viewModel, []);
+            $('#newEvent').val('');
         }
     };
 }

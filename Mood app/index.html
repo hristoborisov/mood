@@ -19,7 +19,8 @@
     <!--Home View-->
     <div id="home-view"
         data-role="view"
-        data-title="Home" class="buttonAppearance">
+        data-title="Home" 
+         class="buttonAppearance">
         <div>
             <div>
                 <a  id="cameraButton" data-role="button" data-icon="camera" href="#camera-view" style="display:block;margin: 2em; text-align: center;width: auto;">Take a Photo</a></li>
@@ -28,6 +29,7 @@
             <div>
 	            <a  id="galleryButton" data-role="button" data-icon="mood-e" href="#gallery-view" style="display:block;margin: 2em; text-align: center;width: auto;">My Moods</a>
             </div>
+  
     </div>
     </div>
     
@@ -41,7 +43,7 @@
                 <a data-role="button" data-align="right" data-bind="click: onUpload">Upload</a>
             </div>
             <div>
-                <img id="previewImage" style="width: 300px; margin: 10px;"/>
+                <img id="previewImage" style="width: 280px; margin: 10px;"/>
                 <ul id="moodButton" data-role="buttongroup">
                     <li>Happy</li>
                     <li>Sad</li>
@@ -60,7 +62,7 @@
         <header data-role="header">
             <div data-role="navbar">
                 <span data-role="view-title"></span>
-                <a data-align="left" data-role="backbutton">Back</a>
+                <a data-align="left" data-role="button" href="home-view">Back</a>
             </div>
         </header>
         <ul data-role="listView" data-style="inset" data-bind="source: moodsDataSource" data-template="listViewTemplate" class="events-list">
